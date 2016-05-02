@@ -1,3 +1,4 @@
+
 var myGraph = new Graph({
   canvasId: 'myCanvas',
   minX: -11,
@@ -83,7 +84,54 @@ var tangentLine3=getTangentLine(graph1,3);
 
 $(document).ready(function(){
 
-  $("#output").hide();
+  $("#newtons_menu").hide();
+  $("#tangent_menu").hide();
+  $("#approx_menu").hide();
+
+  // $("#newtonsel:checked").click(function(){
+  //   alert("ehlo there");
+  // });
+
+  $("#radioButtons").click(function(){
+    var selectedMenuItem=($(":checked").val());
+
+
+
+    if(selectedMenuItem=="newton"){
+      $("#newtons_menu").show();
+    }else{
+      $("#newtons_menu").hide();
+    }
+
+    if(selectedMenuItem=="tangent"){
+      $("#tangent_menu").show();
+    }else{
+      $("#tangent_menu").hide();
+    }
+
+    if(selectedMenuItem=="approx"){
+      $("#approx_menu").show();
+    }else{
+      $("#approx_menu").hide();
+    }
+
+    //more stuff that hides functionality comming
+
+  });
+
+  $("#tan_start").click(function(){
+    var funct=$("#tfunction").val();
+    var tan_point=$("#tanPoint").val();
+    funct="f(x)="+funt; //add the f(x)=
+    var parser=math.parser();
+
+    var parsedFunction=function(x){
+      return parser.eval("f("+x+")");
+    }
+
+    myGraph.drawTanLine(parsedFunction,tan_point,"red",3);
+
+  });
 
   $("#start").click(function(){
     var funt=$("#function").val();

@@ -31,6 +31,10 @@ function Graph(config) {
       // draw x and y axis
       this.drawXAxis();
       this.drawYAxis();
+
+      //array for storing onscreen functions
+      this.graphArray=[];
+
     }
 
     Graph.prototype.drawXAxis = function() {
@@ -142,12 +146,29 @@ function Graph(config) {
 
     //take the tangent line at a point
     Graph.prototype.getDerivative=function(lineFunction,point){
-      var h=0.0001; //set a constent for h
+      var h=0.0001; //set a constent for h( lim as h aproches zero)
       var dx=lineFunction(h+point)-lineFunction(point);
-      var dx=dx/h;
+      dx=dx/h;
 
       return dx; //slope of a tangent line
 
+    }
+
+    Graph.prototype.getTangentLine=function(funct,point){
+      var slope=this.getDerivative(funct,point);
+      var y=funct(point); //get the y value
+      //then plug it into y-y1=m(x-x1)
+      //get some funkey faction
+      var tanFunk=function(x){
+        return slope*(x-point)+y;
+      }
+
+      return tanFunk;
+    }
+
+    Graph.prototype.drawTanLine=function(funct,point,color,thickness){
+      var tanline=this.getTangentLine(funct,point);
+      this.drawEquation(tanline,color,thickness);
     }
 
     Graph.prototype.transformContext = function() {

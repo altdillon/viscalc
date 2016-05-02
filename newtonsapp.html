@@ -9,16 +9,44 @@
   </head>
 
   <body>
+    <!--
     <p id="output"></p>
     <p>f(x)=<input type="text" id="function"></input></p></br>
     <p>starting aproximation:<input type="text" id="startingAprox" value="0"></input></p>
     <button id="start">do math stuff for me!</button>
+    -->
 
     <form id="radioButtons">
-      <input type="radio" name="action" value="newton">newton's method<br>
+      <input type="radio" name="action" value="newton" id="newtonsel">newton's method<br>
       <input type="radio" name="action" value="tangent">tangent Line</br>
       <input type="radio" name="action" value="approx">approximation</br>
     </form>
+
+    <!--stand in gui for controling the program-->
+    <span id="newtons_menu">
+      <!--<p>test stuff for newton's menu</p>-->
+      <p>f(x)=<input type="text" id="function"></input></p></br>
+      <p>starting aproximation:<input type="text" id="startingAprox" value="0"></input></p>
+      <button id="start">run the numbers</button>
+    </span>
+
+    <span id="tangent_menu">
+      <p>f(x)=<input type="text" id="function"></input></p></br>
+      <p>point for tangent line <input type="text" id="tanPoint" value="0"></input></p>
+      <button id="tan_start">find the tangent line</button>
+    </span>
+
+    <span id="approx_menu">
+      <p>test stuff for tangent menu</p>
+    </span>
+
+    <span id="tangent_menu">
+
+    </span>
+
+    <span id="aproximation_menu">
+
+    </span>
 
   </body>
 
