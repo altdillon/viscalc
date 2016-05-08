@@ -2,58 +2,15 @@
   <head>
     <title>visual calc</title>
     <canvas id="myCanvas" width="582" height="410"></canvas>
-    <script src="./bower_components/mathjs/dist/math.js" type="text/javascript"></script>
-    <script src="./bower_components/jquery/dist/jquery.js"></script>
-    <!--<script src="./graphing.js"></script>-->
-    <script src="./app.js"></script>
-    <script src="./bower_components/Chart.js/"></script>
+    <!--<script src="./bower_components/mathjs/dist/math.js" type="text/javascript"></script>-->
+    <!--<script type="text/javascript" src="./bower_components/jquery/dist/jquery.js"></script>-->
+    <!--<script type="text/javascript" src="./bower_components/Chart.js/src/chart.js"></script>-->
+    <script type="text/javascript" src="./bower_components/requirejs/require.js"></script>
+    <!--<script src="./app.js"></script>-->
+
   </head>
 
   <body>
     <canvas id="myChart" width="400" height="400"></canvas>
-
-    <!--
-    <p id="output"></p>
-    <p>f(x)=<input type="text" id="function"></input></p></br>
-    <p>starting aproximation:<input type="text" id="startingAprox" value="0"></input></p>
-    <button id="start">do math stuff for me!</button>
-    -->
-
-    <form id="radioButtons">
-      <input type="radio" name="action" value="newton" id="newtonsel">newton's method<br>
-      <input type="radio" name="action" value="tangent">tangent Line</br>
-      <input type="radio" name="action" value="approx">approximation</br>
-      <input type="radio" name="action" value="riemann">riemann sums<br>
-    </form>
-
-    <!--stand in gui for controling the program-->
-    <span id="newtons_menu">
-      <!--<p>test stuff for newton's menu</p>-->
-      <p>f(x)=<input type="text" id="function"></input></p></br>
-      <p>starting aproximation:<input type="text" id="startingAprox" value="0"></input></p>
-      <button id="start">run the numbers</button>
-    </span>
-
-    <span id="tangent_menu">
-      <p>f(x)=<input type="text" id="function"></input></p></br>
-      <p>point for tangent line <input type="text" id="tanPoint" value="0"></input></p>
-      <button id="tan_start">find the tangent line</button>
-    </span>
-
-    <span id="approx_menu">
-      <p>test stuff for tangent menu</p>
-    </span>
-
-    <span id="tangent_menu">
-
-    </span>
-
-    <span id="aproximation_menu">
-
-    </span>
-
-
-
-  </body>
 
 </html>
