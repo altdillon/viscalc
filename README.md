@@ -1,2 +1,1 @@
-# viscalc
-the goal of this app is to be a visual calculator for calc 1&2 students.  
+Visual calculator app.  The goal of this program is to provide a visual graphing tool to calc students, that can also give some basic information about the graph.  
