@@ -1,1 +1,1 @@
-Visual calculator app.  The goal of this program is to provide a visual graphing tool to calc students, that can also give some basic information about the graph.  
+This is a re tooling of a program I wrote last semester to help me in calc.  It's meant to not only be useful to students taking calc 1 & 2, but to also help me learn about require.js and responsive design. 
