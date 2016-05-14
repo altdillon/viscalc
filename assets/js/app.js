@@ -43,9 +43,15 @@ require(["jquery","mathjs","chartjs", "derivativesjs", "jquery.bootstrap"], func
   //   }
   // });
 
-    //setup a black chart
+    var data_set=[0,2,4,6,8,10,12,14];
+    //setup a line chart chart
     var chart=new Chart(ctx,{
-      
+      type: "line",
+      data: [
+        {
+
+        }
+      ]
     });
 
     debugger;
