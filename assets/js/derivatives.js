@@ -45,7 +45,38 @@ define(["mathjs","chartjs"],function(math,chart){
   }
 
   Equation.prototype.getTanLine=function(point){
-    //bookmark
+    //y-y1=m(x-x1) --> y=m(x-point)+f(point)
+
+    var slope=this.getSlopeAtPoint(point);
+    var y=this.functionAt(point);
+
+    var tanFunk=function(x){
+      return slope*(x-point)+y;
+    }
+
+    return tanFunk;
+  }
+
+  Equation.prototype.getPoints=function(){
+
+    var points=[];
+
+    for(var x=this.domain[0];x<this.domain[1];x++){
+      points[x]=this.functionAt(x);
+      //console.log("point x: "+x+" y:"+ points[x]); //for debugging
+    }
+
+    return points;
+  }
+
+  Equation.prototype.getTanPoints=function(point){
+    var points=[];
+    var tangent=this.getTanLine(point);
+
+    for(var x=this.domain[0];x<this.domain[1];x++){
+      points[x]=tangent[x];
+    }
+    return points;
   }
 
   return {
