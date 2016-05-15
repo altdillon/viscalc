@@ -10,7 +10,7 @@
 
 //the math.js & chart.js lib is a dep, so let's load them.
 
-define(["mathjs","chartjs"],function(math,chart){
+define(["mathjs","plotly"],function(math,chart){
 
   //var parser=math.parser();
 
